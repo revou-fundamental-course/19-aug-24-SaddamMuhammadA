@@ -125,10 +125,19 @@ a {
 
 /* Logo dan navigation menu */
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffffe8;
+  color: rgb(53, 53, 53);
   display: flex;
   justify-content: space-between; /* Jarak antara logo dan Navigasi */
-  padding: 2rem 0; /*jarak atas navigasi menu */
   align-items: center;
+  padding: 10px 15%; /*jarak atas navigasi menu */
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav ul {
@@ -145,7 +154,7 @@ a {
 }
 
 .logo img {
-  max-width: 65px;
+  max-width: 50px;
   height: auto;
 }
 
@@ -187,6 +196,7 @@ nav ul li a {
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   text-align: -webkit-center;
+  padding: 100px 10px 100px;
 }
 
 .hero-name {
@@ -213,6 +223,10 @@ nav ul li a {
   background-color: var(--secondaryBackgroundColor);
   padding: var(--sectionPadding);
 }
+
+/* .services main-container {
+  padding: 50px 5px;
+} */
 
 .services .pre-title {
   margin: 0 auto;
@@ -256,6 +270,22 @@ nav ul li a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-left h2,
+.contact-right h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .contact-form div {
@@ -335,7 +365,8 @@ nav ul li a {
 }
 
 .result-section {
-  width: 45%;
+  width: 100%;
+  height: 80%;
   padding: 15px;
   /* border: 1px solid #ccc;
   background-color: #f9f9f9; */
@@ -344,6 +375,11 @@ nav ul li a {
 
 .result-section h4 {
   margin-bottom: 15px;
+}
+
+canvas {
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
 /* Footer Section */
